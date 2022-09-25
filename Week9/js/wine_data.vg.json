@@ -14,24 +14,16 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Week9/data/total_wine_produced_for_country.csv"
+          "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Week9/data/wine_country_location_clean.csv"
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
-          "longitude": {"field": "longitude", "type": "quantitative"},
-          "latitude": {"field": "latitude", "type": "quantitative"},
+          "longitude": {"field": "location_longitude", "type": "quantitative"},
+          "latitude": {"field": "location_latitude", "type": "quantitative"},
           "size": {
-            "field": "mag",
-            "type": "quantitative",
-            "title": "Magnitude (Richter scale)",
-            "scale": {"domain": [4, 8]}
-          },
-          "color": {
-            "field": "depth",
-            "type": "quantitative",
-            "title": "Depth in km",
-            "scale": {"scheme": "reds"}
+            "value": 10
           }
+        
         }
       }
     ]
