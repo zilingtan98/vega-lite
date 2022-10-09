@@ -14,7 +14,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Week10/data/total_wine_produced_for_country.csv"
+          "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Week10/data/wine_location_clean.csv"
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
@@ -22,6 +22,11 @@
           "latitude": {"field": "location_latitude", "type": "quantitative"},
           "size": {
             "value": 10
+          }, 
+          "color": {
+            "field": "appellation",
+            "type": "nominal",
+            "title": "Appellation"
           }        
         }
       }
