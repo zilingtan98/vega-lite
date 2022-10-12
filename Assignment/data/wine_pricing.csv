@@ -1,0 +1,93 @@
+country,category,mean ($),max ($),min ($)
+ Argentina,Dessert,22.125,72,10
+ Argentina,Red,25.43465634,350,4
+ Argentina,Rose,12.85714286,28,6
+ Argentina,Sparkling,18.13131313,40,8
+ Argentina,White,14.97154754,125,4
+ Australia,Dessert,58.73684211,350,10
+ Australia,Fortified,110.8,375,16
+ Australia,Port/Sherry,73.13333333,1000,10
+ Australia,Red,37.32033992,897,5
+ Australia,Rose,16.17431193,29,5
+ Australia,Sparkling,23.11578947,98,7
+ Australia,White,21.90061602,200,5
+ Austria,Dessert,49.99,167,13
+ Austria,Red,32.28560064,168,8
+ Austria,Rose,15.57462687,25,10
+ Austria,Sparkling,29.75862069,90,12
+ Austria,White,31.89146441,1100,7
+ Chile,Dessert,18.45283019,44,9
+ Chile,Red,22.6888357,400,5
+ Chile,Rose,13.21705426,26,5
+ Chile,Sparkling,22.48275862,45,12
+ Chile,White,14.08577586,95,5
+ France,Dessert,41.78340081,312,10
+ France,Fortified,50.09230769,380,12
+ France,Port/Sherry,28,30,24
+ France,Red,41.2934148,6000,5
+ France,Rose,19.79653996,800,5
+ France,Sparkling,63.41513292,2400,7
+ France,White,35.39044763,1116,5
+ Germany,Dessert,185.516129,775,16
+ Germany,Red,44.64825581,206,7
+ Germany,Rose,17.5,38,6
+ Germany,Sparkling,28.60606061,111,8
+ Germany,White,31.93835781,700,5
+ Greece,Dessert,18.27777778,75,7
+ Greece,Red,24.58884298,150,8
+ Greece,Rose,17.65517241,36,9
+ Greece,White,20.8247619,97,7
+ Hungary,Dessert,86.37634409,764,18
+ Hungary,Red,30.67857143,90,8
+ Hungary,Rose,17.57142857,20,15
+ Hungary,Sparkling,17.85714286,40,10
+ Hungary,White,21.9453125,55,7
+ Israel,Dessert,25.18181818,44,14
+ Israel,Red,34.40291262,199,9
+ Israel,Rose,21.28571429,35,15
+ Israel,Sparkling,25.66666667,38,17
+ Israel,White,21.89285714,69,9
+ Italy,Dessert,41.76173913,375,6
+ Italy,Fortified,21.15384615,35,13
+ Italy,Port/Sherry,13.42857143,20,12
+ Italy,Red,47.80571626,1300,5
+ Italy,Rose,17.86853767,130,7
+ Italy,Sparkling,28.41240876,170,5
+ Italy,White,22.82543978,216,5
+ New Zealand,Dessert,25.77777778,35,17
+ New Zealand,Red,34.46253406,150,11
+ New Zealand,Rose,17.62962963,42,10
+ New Zealand,Sparkling,28.48275862,49,13
+ New Zealand,White,20.53544694,100,7
+ Portugal,Dessert,35.35483871,230,9
+ Portugal,Fortified,131.1486486,2200,9
+ Portugal,Port/Sherry,80.70967742,8500,9
+ Portugal,Red,26.72499122,1450,4
+ Portugal,Rose,12.832,45,5
+ Portugal,Sparkling,20.85517241,60,7
+ Portugal,White,18.24799744,125,5
+ Romania,Dessert,23.5,28,22
+ Romania,Red,15.84246575,100,7
+ Romania,Rose,12.27272727,18,9
+ Romania,Sparkling,8,8,8
+ Romania,White,13.61875,320,4
+ South Africa,Dessert,38.37931034,120,9
+ South Africa,Port/Sherry,18,30,9
+ South Africa,Red,27.53145596,330,6
+ South Africa,Rose,12.76923077,43,6
+ South Africa,Sparkling,21.97777778,50,7
+ South Africa,White,19.47406225,136,5
+ Spain,Dessert,34.13580247,120,11
+ Spain,Fortified,51.5,65,38
+ Spain,Port/Sherry,33.94901961,258,7
+ Spain,Red,30.75412503,1500,4
+ Spain,Rose,13.05245347,84,4
+ Spain,Sparkling,20.1971831,225,5
+ Spain,White,18.93689655,260,4
+ US,Dessert,32.99898271,200,5
+ US,Fortified,37.7027027,80,17
+ US,Port/Sherry,41.67045455,85,10
+ US,Red,43.78924953,2018,3
+ US,Rose,21.01278564,95,5
+ US,Sparkling,37.68721577,250,4
+ US,White,26.25181064,2013,3
