@@ -54,10 +54,10 @@
         }
       },
       {
-        "transform": [{"flatten": ["max"]}],
+        "transform": [{"flatten": ["outliers"]}],
         "mark": {"type": "point", "style": "boxplot-outliers"},
         "encoding": {
-          "x": {"field": "max", "type": "quantitative"}
+          "x": {"field": "outliers", "type": "quantitative"}
         }
       }
     ]
