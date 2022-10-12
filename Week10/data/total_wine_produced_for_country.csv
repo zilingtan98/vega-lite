@@ -1,94 +1,94 @@
 country,category,wine
- Argentina,Dessert,8
- Argentina,Red,6198
- Argentina,Rose,154
- Argentina,Sparkling,99
- Argentina,White,1441
- Australia,Dessert,95
- Australia,Fortified,10
- Australia,Port/Sherry,30
- Australia,Red,5413
- Australia,Rose,109
- Australia,Sparkling,190
- Australia,White,2435
- Austria,Dessert,300
- Austria,Red,1257
- Austria,Rose,134
- Austria,Sparkling,174
- Austria,White,3667
- Chile,Dessert,53
- Chile,Red,5849
- Chile,Rose,129
- Chile,Sparkling,29
- Chile,White,2320
- France,Dessert,494
- France,Fortified,65
- France,Port/Sherry,3
- France,Red,18985
- France,Rose,4104
- France,Sparkling,4401
- France,White,14007
- Germany,Dessert,155
- Germany,Red,344
- Germany,Rose,52
- Germany,Sparkling,99
- Germany,White,4153
- Greece,Dessert,36
- Greece,Red,484
- Greece,Rose,58
- Greece,White,525
- Hungary,Dessert,93
- Hungary,Red,84
- Hungary,Rose,7
- Hungary,Sparkling,7
- Hungary,White,128
- Israel,Dessert,11
- Israel,Red,824
- Israel,Rose,28
- Israel,Sparkling,9
- Israel,White,224
- Italy,Dessert,575
- Italy,Fortified,13
- Italy,Port/Sherry,7
- Italy,Red,23162
- Italy,Rose,677
- Italy,Sparkling,3288
- Italy,White,8129
- New Zealand,Dessert,9
- New Zealand,Red,1468
- New Zealand,Rose,54
- New Zealand,Sparkling,29
- New Zealand,White,2271
- Portugal,Dessert,31
- Portugal,Fortified,74
- Portugal,Port/Sherry,961
- Portugal,Red,5698
- Portugal,Rose,500
- Portugal,Sparkling,145
- Portugal,White,3121
- Romania,Dessert,4
- Romania,Red,146
- Romania,Rose,11
- Romania,Sparkling,1
- Romania,White,160
- South Africa,Dessert,29
- South Africa,Port/Sherry,5
- South Africa,Red,1669
- South Africa,Rose,65
- South Africa,Sparkling,45
- South Africa,White,1253
- Spain,Dessert,81
- Spain,Fortified,2
- Spain,Port/Sherry,255
- Spain,Red,8606
- Spain,Rose,591
- Spain,Sparkling,1065
- Spain,White,2900
- US,Dessert,983
- US,Fortified,37
- US,Port/Sherry,88
- US,Red,73727
- US,Rose,3676
- US,Sparkling,1979
- US,White,30376
+Argentina,Dessert,8
+Argentina,Red,6198
+Argentina,Rose,154
+Argentina,Sparkling,99
+Argentina,White,1441
+Australia,Dessert,95
+Australia,Fortified,10
+Australia,Port/Sherry,30
+Australia,Red,5413
+Australia,Rose,109
+Australia,Sparkling,190
+Australia,White,2435
+Austria,Dessert,300
+Austria,Red,1257
+Austria,Rose,134
+Austria,Sparkling,174
+Austria,White,3667
+Chile,Dessert,53
+Chile,Red,5849
+Chile,Rose,129
+Chile,Sparkling,29
+Chile,White,2320
+France,Dessert,494
+France,Fortified,65
+France,Port/Sherry,3
+France,Red,18985
+France,Rose,4104
+France,Sparkling,4401
+France,White,14007
+Germany,Dessert,155
+Germany,Red,344
+Germany,Rose,52
+Germany,Sparkling,99
+Germany,White,4153
+Greece,Dessert,36
+Greece,Red,484
+Greece,Rose,58
+Greece,White,525
+Hungary,Dessert,93
+Hungary,Red,84
+Hungary,Rose,7
+Hungary,Sparkling,7
+Hungary,White,128
+Israel,Dessert,11
+Israel,Red,824
+Israel,Rose,28
+Israel,Sparkling,9
+Israel,White,224
+Italy,Dessert,575
+Italy,Fortified,13
+Italy,Port/Sherry,7
+Italy,Red,23162
+Italy,Rose,677
+Italy,Sparkling,3288
+Italy,White,8129
+New Zealand,Dessert,9
+New Zealand,Red,1468
+New Zealand,Rose,54
+New Zealand,Sparkling,29
+New Zealand,White,2271
+Portugal,Dessert,31
+Portugal,Fortified,74
+Portugal,Port/Sherry,961
+Portugal,Red,5698
+Portugal,Rose,500
+Portugal,Sparkling,145
+Portugal,White,3121
+Romania,Dessert,4
+Romania,Red,146
+Romania,Rose,11
+Romania,Sparkling,1
+Romania,White,160
+South Africa,Dessert,29
+South Africa,Port/Sherry,5
+South Africa,Red,1669
+South Africa,Rose,65
+South Africa,Sparkling,45
+South Africa,White,1253
+Spain,Dessert,81
+Spain,Fortified,2
+Spain,Port/Sherry,255
+Spain,Red,8606
+Spain,Rose,591
+Spain,Sparkling,1065
+Spain,White,2900
+US,Dessert,983
+US,Fortified,37
+US,Port/Sherry,88
+US,Red,73727
+US,Rose,3676
+US,Sparkling,1979
+US,White,30376
 
