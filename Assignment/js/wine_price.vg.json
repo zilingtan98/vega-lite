@@ -6,7 +6,7 @@
     "data": {
       "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/wine_pricing.csv"
     },
-    "encoding": {"y": {"field": "Species", "type": "nominal", "title": null}},
+    "encoding": {"y": {"field": "country", "type": "nominal", "title": "null"}},
     "layer": [
       {
         "mark": {"type": "rule"},
