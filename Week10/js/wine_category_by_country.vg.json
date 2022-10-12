@@ -3,7 +3,7 @@
     "width": 450,
     "height": 575,
     "title": "Wine By Category for Each Country",
-    "data": {"url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Week10/data/total_wine_produced_for_country.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/total_wine_produced_for_country.csv"},
     "mark": "bar",
     "encoding": {
       "x": {
