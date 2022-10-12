@@ -1,8 +1,8 @@
-category,min,q1,median,q3,max
-Dessert,5,22,32,50,775
-Fortified,9,23,32,65,2200
-Port/Sherry,7,20,35,69,8500
-Red,3,20,30,50,6000
-Rose,4,13,17,22,800
-Sparkling,4,19,30,50,2400
-White,3,15,20,30,2013
+category,min,q1,median,q3,max,upper
+Dessert,5,22,32,50,775,74
+Fortified,9,23,32,65,2200,95
+Port/Sherry,7,20,35,69,8500,108.5
+Red,3,20,30,50,6000,75
+Rose,4,13,17,22,800,30.5
+Sparkling,4,19,30,50,2400,76.5
+White,3,15,20,30,2013,42.5
