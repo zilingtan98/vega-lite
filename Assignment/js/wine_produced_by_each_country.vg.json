@@ -1,34 +1,51 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 450,
-    "title": "Wine Available by Each Country",
-    "projection": {"type": "equalEarth"},
-    "layer": [
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Week10/js/ne_1.topojson",
-          "format": {"type": "topojson", "feature": "ne_10m_admin_0_countries"}
-        },
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 450,
+  "title": "Wine Available by Each Country",
+  "signals": [
+    {
+      "name": "selected",
+      "value": "",
+      "on": [
+        { "events": "arc:click!", "update": "datum" },
+        { "events": "dblclick!", "update": "''" }
+      ]
+    }
+  ],
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/js/ne_1.topojson",
+        "format": {"type": "topojson", "feature": "ne_10m_admin_0_countries"}
       },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Week10/data/wine_location_clean.csv"
-        },
-        "mark": {"type": "circle", "tooltip": {"content": "data"}},
-        "encoding": {
-          "longitude": {"field": "location_longitude", "type": "quantitative"},
-          "latitude": {"field": "location_latitude", "type": "quantitative"},
-          "size": {
-            "value": 10
-          }, 
-          "color": {
-            "field": "appellation",
-            "type": "nominal",
-            "title": "Appellation"
-          }        
-        }
+      "mark": {"type": "geoshape", "fill": "#F5FFFA", "stroke": "#e0dfdf"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/wine_location_clean.csv"
+      },
+      "mark": {"type": "circle", "tooltip": {
+        "signal": "{'Country': datum.country,'Appellation': datum.appellation, 'Latitude': datum.location_latitude, 'Logitude': datum.location_longitude}"
       }
-    ]
-  }
+      },
+      "encoding": {
+        "longitude": {"field": "location_longitude", "type": "quantitative"},
+        "latitude": {"field": "location_latitude", "type": "quantitative"},
+        "size": {
+          "value": 15
+        }, 
+        "color": {
+          "field": "country",
+          "type": "nominal",
+          "scale": {
+            "domain": [ " Argentina", " Australia",  " Austria", " Chile", " France", " Germany", " Greece", " Hungary", " Israel", " Italy", " New Zealand", " Portugal", " Romania", " South Africa", " Spain", " US"],
+            "range": ["#318ce7","#1f3442", "#fd8f52", "#d3d3d3","#cd5c5c", "#28b463", "#fff3c4", "#b0823d", "#7c379d", "#d7f7bc", "#7aa7b9", "#78aef8", "#e8f81a", "#09abb9", "#d58df5", "#2e2fe6"]
+          },
+          "title": "Country"
+        }   
+      }
+    }   
+  ]
+}
