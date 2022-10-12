@@ -1,12 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Average Price for Each Wine Type",
+    "title": "Prices for Wine Type",
     "width": 600,
     "height": 400,
     "data": {
       "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/box_plot_wine_price_category.csv"
     },
-    "encoding": {"y": {"field": "category", "type": "nominal", "title": "null"}},
+    "encoding": {"y": {"field": "category", "type": "nominal", "title": "Wine Type"}},
     "layer": [
       {
         "mark": {"type": "rule"},
@@ -16,9 +16,9 @@
             "type": "quantitative",
             "scale": {
                 "zero": false
-            }, 
-            "title": null},
-          "x2": {"field": "max"},
+            },
+            "title": "Price ($)"},
+          "x2": {"field": "upper"},
           "tooltip": [
             {"field": "category", "type": "nominal", "title": "Wine Type"},
             {"field": "min", "type": "quantitative", "title": "Min. Price ($)"},
@@ -28,7 +28,7 @@
         }
       },
       {
-        "mark": {"type": "bar", "size": 14},
+        "mark": {"type": "bar", "size": 25},
         "encoding": {
           "x": {"field": "q1", "type": "quantitative"},
           "x2": {"field": "q3"},
@@ -42,7 +42,7 @@
         }
       },
       {
-        "mark": {"type": "tick", "color": "white", "size": 200},
+        "mark": {"type": "tick", "color": "white", "size": 20},
         "encoding": {
           "x": {"field": "median", "type": "quantitative"},
           "tooltip": [
@@ -54,15 +54,10 @@
         }
       },
       {
+        "transform": [{"flatten": ["max"]}],
         "mark": {"type": "point", "style": "boxplot-outliers"},
         "encoding": {
-          "x": {"field": "outliers", "type": "quantitative"}, 
-          "tooltip": [
-            {"field": "category", "type": "nominal", "title": "Wine Type"},
-            {"field": "min", "type": "quantitative", "title": "Min. Price ($)"},
-            {"field": "max", "type": "quantitative", "title": "Max. Price ($)"},
-            {"field": "median", "type": "quantitative", "title": "Median Price ($)"}
-          ]
+          "x": {"field": "max", "type": "quantitative"}
         }
       }
     ]
