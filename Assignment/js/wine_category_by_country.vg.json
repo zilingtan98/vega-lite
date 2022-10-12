@@ -1,33 +1,87 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 450,
-    "height": 575,
-    "title": "Wine By Category for Each Country",
-    "data": {"url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Week10/data/total_wine_produced_for_country.csv"},
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "country",
-        "type": "nominal",
-        "title": "Country"
-      },
-      "y": {
-        "field":"wine",
-        "type": "quantitative",
-        "title": "Number of Item Type Produced"
-      },
-      "color": {
-        "field": "category",
-        "type": "nominal",
-        "scale": {
-          "domain": ["Port/Sherry", "Fortified", "Dessert", "White", "Red", "Rose", "Sparkling"],
-          "range": ["#318ce7","#1f3442", "#fd8f52", "#d3d3d3","#cd5c5c", "#28b463", "#fff3c4"]
-        },
-        "title": "Category"
-      },
-      "tooltip": [
-        {"field": "country", "type": "nominal", "title": "Country"},
-        {"field": "wine", "type": "quantitative", "title": "Count"}
-      ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Wine Types for Each Country",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/total_wine_produced_for_country.csv"
+  },
+  "params": [
+    {
+      "name": "selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Port/Sherry",
+          "Fortified",
+          "Dessert",
+          "White",
+          "Red",
+          "Rose",
+          "Sparkling"
+        ],
+        "labels": [
+          "Show All",
+          "Port/Sherry",
+          "Fortified",
+          "Dessert",
+          "White",
+          "Red",
+          "Rose",
+          "Sparkling"
+        ],
+        "name": "Filter by Wine Types: "
+      }
     }
-  }
+  ],
+  "transform": [
+    {"filter": "selection == null || datum.category == selection"}
+  ],
+  "encoding": {
+    "x": {"field": "country", "type": "ordinal", "title": "Country", "sort": "-y"},
+    "y": {
+      "field": "wine",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "title": "Number of Wine Type"
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar"},
+      "encoding": {
+        "tooltip": [
+          {"field": "country", "type": "nominal", "title": "Country"},
+          {"field": "wine", "type": "quantitative", "title": "Count"},
+          {"field": "category", "type": "nominal", "title": "Wine Type"}
+        ],
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Port/Sherry", "Fortified", "Dessert", "White", "Red", "Rose", "Sparkling"],
+            "range": ["#318ce7","#1f3442", "#fd8f52", "#d3d3d3","#cd5c5c", "#28b463", "#fff3c4"]
+          },
+          "title": "Wine Types"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dy": -5
+      },
+      "encoding": {
+        "text": {
+          "field": "wine",
+          "aggregate": "sum",
+          "type": "quantitative",
+          "format": ".0f"
+        }
+      }
+    }
+  ]
+}
