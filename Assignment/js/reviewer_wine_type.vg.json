@@ -3,7 +3,7 @@
     "height": 600,
     "width": 650,
     "title": {
-      "text": "Connection between Music Genres and Topic of Lyrics Based on Streams",
+      "text": "Reviewers and Their Type of Wines Reviewed",
       "align": "center",
       "encode": {
         "title": {
@@ -16,19 +16,18 @@
     "data": [
       {
         "name": "rawData",
-        "url": "https://raw.githubusercontent.com/im30805/FIT3179/main/spotify_sankey_alluvial_key_data.json",
+        "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/reviewer_wine.json",
         "transform": [
-          {"type": "formula", "expr": "datum.genre", "as": "genre_stack"},
-          {"type": "formula", "expr": "datum.lda_topic", "as": "lda_topic_stack"},
-          {"type": "formula", "expr": "datum.streams", "as": "size"}
+          {"type": "formula", "expr": "datum.reviewer", "as": "reviewer"},
+          {"type": "formula", "expr": "datum.category", "as": "category"},
+          {"type": "formula", "expr": "datum.count", "as": "size"}
         ],
         "format": {
           "type": "json",
           "parse": {
-            "key": "string",
-            "genre": "string", 
-            "lda_topic": "string",
-            "streams": "number"
+            "reviewer": "string", 
+            "category": "string",
+            "count": "number"
           }
         }
       },
@@ -38,13 +37,13 @@
         "transform": [
           {
             "type": "filter",
-            "expr": "!groupSelector || groupSelector.genre_stack == datum.genre_stack || groupSelector.lda_topic_stack == datum.lda_topic_stack"
+            "expr": "!groupSelector || groupSelector.reviewer == datum.reviewer || groupSelector.category == datum.category"
           },
-          {"type": "formula", "expr": "datum.genre_stack+datum.lda_topic_stack", "as": "key"},
-          {"type": "fold", "fields": ["genre_stack", "lda_topic_stack"], "as": ["stack", "grpId"]},
+          {"type": "formula", "expr": "datum.reviewer+datum.category", "as": "key"},
+          {"type": "fold", "fields": ["reviewer", "category"], "as": ["stack", "grpId"]},
           {
             "type": "formula",
-            "expr": "datum.stack == 'genre_stack' ? datum.genre_stack+' '+datum.lda_topic_stack : datum.lda_topic_stack+' '+datum.genre_stack",
+            "expr": "datum.stack == 'reviewer' ? datum.reviewer+' '+datum.category : datum.category+' '+datum.reviewer",
             "as": "sortField"
           },
           {
@@ -77,7 +76,7 @@
           {"type": "formula", "expr": "scale('y', datum.y1)", "as": "scaledY1"},
           {
             "type": "formula",
-            "expr": "datum.stack == 'genre_stack'",
+            "expr": "datum.stack == 'reviewer'",
             "as": "rightLabel"
           },
           {
@@ -90,13 +89,13 @@
       {
         "name": "destinationNodes",
         "source": "nodes",
-        "transform": [{"type": "filter", "expr": "datum.stack == 'lda_topic_stack'"}]
+        "transform": [{"type": "filter", "expr": "datum.stack == 'category'"}]
       },
       {
         "name": "edges",
         "source": "nodes",
         "transform": [
-          {"type": "filter", "expr": "datum.stack == 'genre_stack'"},
+          {"type": "filter", "expr": "datum.stack == 'reviewer'"},
           {
             "type": "lookup",
             "from": "destinationNodes",
@@ -109,9 +108,9 @@
             "orient": "horizontal",
             "shape": "diagonal",
             "sourceY": {"expr": "scale('y', datum.yc)"},
-            "sourceX": {"expr": "scale('x', 'genre_stack') + bandwidth('x')"},
+            "sourceX": {"expr": "scale('x', 'reviewer') + bandwidth('x')"},
             "targetY": {"expr": "scale('y', datum.target.yc)"},
-            "targetX": {"expr": "scale('x', 'lda_topic_stack')"}
+            "targetX": {"expr": "scale('x', 'category')"}
           },
           {
             "type": "formula",
@@ -131,7 +130,7 @@
         "name": "x",
         "type": "band",
         "range": "width",
-        "domain": ["genre_stack", "lda_topic_stack"],
+        "domain": ["reviewer", "category"],
         "paddingOuter": 0.05,
         "paddingInner": 0.95
       },
@@ -145,13 +144,13 @@
         "name": "color",
         "type": "ordinal",
         "range": {"scheme": "tableau20"},
-        "domain": {"data": "rawData", "fields": ["genre_stack", "lda_topic_stack"]}
+        "domain": {"data": "rawData", "fields": ["reviewer", "category"]}
       },
       {
         "name": "stackNames",
         "type": "ordinal",
-        "range": ["Genre", "LDA Topic"],
-        "domain": ["genre_stack", "lda_topic_stack"]
+        "range": ["Reviewer", "Wine Types"],
+        "domain": ["reviewer", "category"]
       }
     ],
     "axes": [
@@ -177,22 +176,22 @@
           "update": {
             "stroke": [
               {
-                "test": "groupSelector && groupSelector.stack=='genre_stack'",
+                "test": "groupSelector && groupSelector.stack=='reviewer'",
                 "scale": "color",
-                "field": "lda_topic_stack"
+                "field": "category"
               },
-              {"scale": "color", "field": "genre_stack"}
+              {"scale": "color", "field": "reviewer"}
             ],
             "strokeWidth": {"field": "strokeWidth"},
             "path": {"field": "path"},
             "strokeOpacity": {
-              "signal": "!groupSelector && (groupHover.genre_stack == datum.genre_stack || groupHover.lda_topic_stack == datum.lda_topic_stack) ? 0.3 : 0.9"
+              "signal": "!groupSelector && (groupHover.reviewer == datum.reviewer || groupHover.category == datum.category) ? 0.3 : 0.9"
             },
             "zindex": {
-              "signal": "!groupSelector && (groupHover.genre_stack == datum.genre_stack || groupHover.lda_topic_stack == datum.lda_topic_stack) ? 1 : 0"
+              "signal": "!groupSelector && (groupHover.reviewer == datum.reviewer || groupHover.category == datum.category) ? 1 : 0"
             },
             "tooltip": {
-              "signal": "datum.genre_stack + ' → ' + datum.lda_topic_stack + '    ' + format(datum.size, ',.0f') + '   (' + format(datum.percentage, '.1%') + ')'"
+              "signal": "datum.reviewer + ' → ' + datum.category + '    ' + format(datum.size, ',.0f') + '   (' + format(datum.percentage, '.1%') + ')'"
             }
           },
           "hover": {"strokeOpacity": {"value": 1}}
@@ -318,7 +317,7 @@
         "on": [
           {
             "events": "@groupMark:mouseover",
-            "update": "{genre_stack:datum.stack=='genre_stack' && datum.grpId, lda_topic_stack:datum.stack=='lda_topic_stack' && datum.grpId}"
+            "update": "{reviewer:datum.stack=='reviewer' && datum.grpId, category:datum.stack=='category' && datum.grpId}"
           },
           {"events": "mouseout", "update": "{}"}
         ]
@@ -329,7 +328,7 @@
         "on": [
           {
             "events": "@groupMark:click!",
-            "update": "{stack:datum.stack, genre_stack:datum.stack=='genre_stack' && datum.grpId, lda_topic_stack:datum.stack=='lda_topic_stack' && datum.grpId}"
+            "update": "{stack:datum.stack, reviewer:datum.stack=='reviewer' && datum.grpId, category:datum.stack=='category' && datum.grpId}"
           },
           {
             "events": [

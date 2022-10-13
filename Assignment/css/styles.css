@@ -1,8 +1,36 @@
-#symbol_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+html { overflow-y: scroll; }
+body { 
+	/* position: absolute;  */
+	max-width: 80%;
+	margin:auto;
+}
+#header{
+	text-align: left;
+	border-style: solid;
+	font-family: "Open Sans";
+	font-size: 16px;
+}
+
+#section1{
+	width: 99.5%;
+	border-style: solid;
+}
+
+#info{
+	width: 40%;
+	border-style: solid;
+}
+
+#title{
+	text-align: left;
+	font-family: "Open Sans";
+	font-size: 20px;
+}
+
+#graph1{
+	background-color: yellow;
+	float: right;
+	width: 60%;
+	border-style: solid;
 }
