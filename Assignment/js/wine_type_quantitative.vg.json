@@ -2,7 +2,15 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Though Vega-Lite supports only one scale per axes, one can create a parallel coordinate plot by folding variables, using `joinaggregate` to normalize their values and using ticks and rules to manually create axes.",
   "data": {
-    "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/wine_type_quantitative_data.csv"
+    "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/wine_type_quantitative_data.json"
+  },
+  "format": {
+    "type": "json",
+    "parse": {
+      "alcohol (%)": "number",
+      "rating": "number",
+      "price ($)": "number"
+    }
   },
   "width": 600,
   "height": 300,
@@ -14,6 +22,7 @@
         {"op": "min", "field": "value", "as": "min"},
         {"op": "max", "field": "value", "as": "max"}
       ],
+      "frame": [null, null],
       "groupby": ["key"]
     },
     {
@@ -26,9 +35,10 @@
     }
   ],
   "layer": [{
+
     "mark": {"type": "rule", "color": "#ccc"},
     "encoding": {
-      "detail": {"aggregate": "count"},
+      "detail": {"aggregate": "count", "type": "quantitative"},
       "x": {"field": "key"}
     }
   }, {
