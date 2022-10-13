@@ -29458,5 +29458,78 @@
         "alcohol (%)": "14",
         "rating": "89",
         "price ($)": "24"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "19",
+        "rating": "91",
+        "price ($)": "23"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "18.5",
+        "rating": "94",
+        "price ($)": "31"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "19.5",
+        "rating": "90",
+        "price ($)": "80"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "20",
+        "rating": "92",
+        "price ($)": "80"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "17",
+        "rating": "95",
+        "price ($)": "85"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "20",
+        "rating": "90",
+        "price ($)": "120"
+    },
+
+    {
+        "category": "Fortified",
+        "alcohol (%)": "18",
+        "rating": "91",
+        "price ($)": "200"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "18",
+        "rating": "95",
+        "price ($)": "140"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "18",
+        "rating": "94",
+        "price ($)": "70"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "20.5",
+        "rating": "95",
+        "price ($)": "190"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "18.5",
+        "rating": "97",
+        "price ($)": "455"
+    },
+    {
+        "category": "Fortified",
+        "alcohol (%)": "20",
+        "rating": "98",
+        "price ($)": "610"
     }
 ]
