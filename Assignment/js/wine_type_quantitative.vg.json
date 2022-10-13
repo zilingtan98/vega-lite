@@ -42,8 +42,8 @@
       }
     }
   ],
-  "width": 700,
-  "height": 700,
+  "width": 550,
+  "height": 400,
   "transform": [
     {"filter": "selection == null || datum.category == selection"},
     {"window": [{"op": "count", "as": "index"}]},
