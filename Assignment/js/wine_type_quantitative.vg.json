@@ -1,25 +1,55 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Comparison in Wine Types",
   "data": {
     "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/wine_type_quantitative_data.json"
-  },
-  "format": {
-    "type": "json",
-    "parse": {
-      "alcohol (%)": "number",
-      "rating": "number",
-      "price ($)": "number"
+    ,
+    "format": {
+      "type": "json",
+      "parse": {
+        "alcohol (%)": "number",
+        "rating": "number",
+        "price ($)": "number"
+      }
     }
   },
+  "params": [
+    {
+      "name": "selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Port/Sherry",
+          "Fortified",
+          "Dessert",
+          "White",
+          "Red",
+          "Rose",
+          "Sparkling"
+        ],
+        "labels": [
+          "Show All",
+          "Port/Sherry",
+          "Fortified",
+          "Dessert",
+          "White",
+          "Red",
+          "Rose",
+          "Sparkling"
+        ],
+        "name": "Filter by Wine Types: "
+      }
+    }
+  ],
   "width": 700,
   "height": 700,
   "transform": [
-    {"filter": "datum.category"},
-    {"calculate": "datum.rating /10", "as": "rating"},
+    {"filter": "selection == null || datum.category == selection"},
     {"window": [{"op": "count", "as": "index"}]},
     {"fold": ["alcohol (%)", "rating", "price ($)"]},
     {
-      "joinaggregate": [
+      "window": [
         {"op": "min", "field": "value", "as": "min"},
         {"op": "max", "field": "value", "as": "max"}
       ],
@@ -47,7 +77,9 @@
     "encoding": {
       "color": {
         "type": "nominal", 
-        "field": "category"
+        "field": "category",
+        "title": "Wine Type"
+        
       },
       "detail": {"type": "nominal", "field": "index"},
       "opacity": {"value": 0.8},
