@@ -14,6 +14,8 @@
   "width": 700,
   "height": 700,
   "transform": [
+    {"filter": "datum.category"},
+    {"calculate": "datum.rating /10", "as": "rating"},
     {"window": [{"op": "count", "as": "index"}]},
     {"fold": ["alcohol (%)", "rating", "price ($)"]},
     {
