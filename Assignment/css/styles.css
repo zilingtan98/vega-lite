@@ -79,6 +79,12 @@ body {
 	margin-right: 0px;
 	/* border-style: solid; */
 }
+#graph4{
+	float: right;
+	width: 60%;
+	margin-right: 0px;
+	/* border-style: solid; */
+}
 #symbol_map{
 	margin-top: 10px;
 	margin-right:0px;
