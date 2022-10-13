@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 500,
-  "height": 450,
+  "width": 525,
+  "height": 350,
   "title": "Wine Available by Each Country",
   "signals": [
     {
@@ -27,7 +27,7 @@
         "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/wine_location_clean.csv"
       },
       "mark": {"type": "circle", "tooltip": {
-        "signal": "{'Country': datum.country,'Appellation': datum.appellation, 'Latitude': datum.location_latitude, 'Logitude': datum.location_longitude}"
+        "signal": "{'Wine Name':datum.wine,'Country': datum.country,'Appellation': datum.appellation, 'Latitude': datum.location_latitude, 'Logitude': datum.location_longitude}"
       }
       },
       "encoding": {

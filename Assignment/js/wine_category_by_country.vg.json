@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Wine Types for Each Country",
-  "width": 600,
-  "height": 400,
+  "width": 550,
+  "height": 350,
   "data": {
     "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/total_wine_produced_for_country.csv"
   },

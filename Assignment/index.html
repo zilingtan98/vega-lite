@@ -12,7 +12,6 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +21,7 @@
   <div class="page">
 
       <div id="header">
-        <h1>Simple Guide to Understand Your Choices of Wines</h1>
+        <h1>Simple Guide to Understand Your Choice of Wines. </h1>
       </div>
 
       <div class="container">
@@ -30,10 +29,21 @@
           <!--text section-->
           <div id="info">
             <h2 id="title">
-              What is Wine?
+              What is Wine? &#127863;
             </h2>
-            <p>
-              Most wine 
+            <p id="txtContent">
+              Wine is an alcoholic beverage made with the fermented juice of grapes.
+              <br>
+              <br>
+              They are made of grapes, but not like the ones you bought in the grocery stores!
+              Wine grapes are usually smaller, sweeter, contains seeds and mostly have thick skins.
+              There are <strong>over 1300 wine grape varieties</strong> used to in commercial production but 
+              only about
+              100 of these varieties make up 75-80% of the world's vineyards. The most common wine grape
+              used in the world is Cabernet Sauvignon. 
+              <br>
+              <br>
+
             </p>
           <!--graph section-->
           </div>
@@ -43,8 +53,47 @@
           </div>
         </div>
 
-        
-        <div id="stacked_bar" class="vis-container"></div>
+        <div id="section2">
+        <div id="info">
+            <h2 id="title">
+              Types of Wine
+            </h2>
+            <p id="txtContent">
+              Wines generally can be categorized into seven different types—<strong>Red, White,
+               Dessert, Rose, Sparkling, Fortified and Port/Sherry</strong>. These types of wines
+               are introduced as they are suitables for different type of dishes such as 
+               chicken, pork, cured meat, lamb, beef, barbecue, Italian, American, Chinese, Thai, Indian, full-flavored like cheddar and firm cheeses such as Manchego.
+              <br>
+              <br>
+              Despite wine's global popularity, its production is a fairly exclusive industry.
+              Four countries—<strong>France, Italy, Spain, and the United States—produce more than half the wine in the world</strong>.
+            </p>
+          </div>
+
+          <div id="graph2">
+            <div id="stacked_bar" class="vis-container"></div>
+          </div>
+        </div>
+
+
+        <div id="section3">
+          <div id="info">
+              <h2 id="title">
+                Pricing of Wine
+              </h2>
+              <p id="txtContent">
+                There are a few factors that could determine the cost of a wine, such as
+                type of grapes used, wine origin region, winemaking process, and labor cost.
+                <br>
+                <br>
+                
+              </p>
+            </div>
+  
+            <div id="graph3">
+              <div id="box_plot" class="vis-container"></div>
+            </div>
+          </div>
       </div>
 
 
@@ -59,6 +108,11 @@
 
     var spec2 = "js/wine_category_by_country.vg.json";
     vegaEmbed('#stacked_bar', spec2,  { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec3 = "js/wine_price.vg.json";
+    vegaEmbed('#box_plot', spec3,  { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

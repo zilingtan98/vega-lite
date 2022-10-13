@@ -3,34 +3,81 @@ html { overflow-y: scroll; }
 body { 
 	/* position: absolute;  */
 	max-width: 80%;
-	margin:auto;
+	margin: auto;
 }
 #header{
-	text-align: left;
-	border-style: solid;
+	text-align: center;
+	/* border-style: solid; */
 	font-family: "Open Sans";
-	font-size: 16px;
+	font-size: 20px;
+	font-weight: bolder;
+	/* text-decoration: underline; */
+	
 }
 
 #section1{
 	width: 99.5%;
-	border-style: solid;
+	height: 400px;
+}
+
+#section2{
+	margin-top: 30px;
+	width: 99.5%;
+	height: 530px;
+}
+
+#section3{
+	margin-top: 30px;
+	width: 99.5%;
+	height: 480px;
+	/* border-style: solid; */
 }
 
 #info{
-	width: 40%;
-	border-style: solid;
+	width: 35%;
+	float: left;
 }
 
+
+
 #title{
+	margin-top: 10px;
 	text-align: left;
 	font-family: "Open Sans";
-	font-size: 20px;
+	font-size: 25px;
+}
+#txtContent{
+	font-family: "Open Sans";
+	font-size: 16px;
+	text-align: justify;
 }
 
 #graph1{
-	background-color: yellow;
+	float: right;
+	width: 55%;
+	margin-right: 0px;
+	/* border-style: solid; */
+}
+
+#graph2{
 	float: right;
 	width: 60%;
-	border-style: solid;
+	margin-right: 0px;
+	/* border-style: solid; */
+}
+
+#graph3{
+	float: right;
+	width: 60%;
+	margin-right: 0px;
+	/* border-style: solid; */
+}
+#symbol_map{
+	margin-top: 10px;
+	margin-right:0px;
+}
+
+#stacked_bar, #box_plot{
+	margin-top: 15px;
+	margin-right:0px;
 }
