@@ -7,9 +7,8 @@
   "width": 600,
   "height": 300,
   "transform": [
-    {"filter": "datum['alcohol (%)']"},
     {"window": [{"op": "count", "as": "index"}]},
-    {"fold": ["alcohol (%)", "price ($)", "rating"]},
+    {"fold": ["alcohol (%)", "rating", "price ($)"]},
     {
       "joinaggregate": [
         {"op": "min", "field": "value", "as": "min"},
@@ -45,10 +44,10 @@
         "field": "alcohol (%)"
       }, {
         "type": "quantitative",
-        "field": "price ($)"
+        "field": "rating"
       }, {
         "type": "quantitative",
-        "field": "rating"
+        "field": "price ($)"
       }]
     }
   }, {
