@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Though Vega-Lite supports only one scale per axes, one can create a parallel coordinate plot by folding variables, using `joinaggregate` to normalize their values and using ticks and rules to manually create axes.",
   "data": {
     "url": "https://raw.githubusercontent.com/zilingtan98/vega-lite/main/Assignment/data/wine_type_quantitative_data.json"
   },
@@ -12,8 +11,8 @@
       "price ($)": "number"
     }
   },
-  "width": 600,
-  "height": 300,
+  "width": 700,
+  "height": 700,
   "transform": [
     {"window": [{"op": "count", "as": "index"}]},
     {"fold": ["alcohol (%)", "rating", "price ($)"]},
@@ -39,26 +38,19 @@
     "mark": {"type": "rule", "color": "#ccc"},
     "encoding": {
       "detail": {"aggregate": "count", "type": "quantitative"},
-      "x": {"field": "key"}
+      "x": {"type": "nominal","field": "key"}
     }
   }, {
-    "mark": "line",
+    "mark": {"type": "line", "interpolate": "monotone"},
     "encoding": {
-      "color": {"type": "nominal", "field": "category"},
+      "color": {
+        "type": "nominal", 
+        "field": "category"
+      },
       "detail": {"type": "nominal", "field": "index"},
-      "opacity": {"value": 0.3},
+      "opacity": {"value": 0.8},
       "x": {"type": "nominal", "field": "key"},
-      "y": {"type": "quantitative", "field": "norm_val", "axis": null},
-      "tooltip": [{
-        "type": "quantitative",
-        "field": "alcohol (%)"
-      }, {
-        "type": "quantitative",
-        "field": "rating"
-      }, {
-        "type": "quantitative",
-        "field": "price ($)"
-      }]
+      "y": {"type": "quantitative", "field": "norm_val", "axis": null}
     }
   }, {
     "encoding": {
@@ -68,7 +60,7 @@
     "layer": [{
       "mark": {"type": "text", "style": "label"},
       "encoding": {
-        "text": {"aggregate": "max", "field": "max"}
+        "text": {"aggregate": "max", "field": "max", "type": "quantitative", "format": ".2f"}
       }
     }, {
       "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
@@ -81,7 +73,7 @@
     "layer": [{
       "mark": {"type": "text", "style": "label"},
       "encoding": {
-        "text": {"aggregate": "min", "field": "mid"}
+        "text": {"aggregate": "min", "field": "mid","type": "quantitative", "format": ".2f"}
       }
     }, {
       "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
