@@ -52,13 +52,6 @@
             {"field": "median", "type": "quantitative", "title": "Median Price ($)"}
           ]
         }
-      },
-      {
-        "transform": [{"flatten": ["outliers"]}],
-        "mark": {"type": "point", "style": "boxplot-outliers"},
-        "encoding": {
-          "x": {"field": "outliers", "type": "quantitative"}
-        }
       }
     ]
   }
