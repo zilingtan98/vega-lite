@@ -60,7 +60,7 @@
             </h2>
             <p id="txtContent">
               Wines generally can be categorized into seven different types—<strong>Red, White,
-               Dessert, Rose, Sparkling, Fortified and Port/Sherry</strong>. These types of wines
+               Dessert, Rosé, Sparkling, Fortified and Port/Sherry</strong>. These types of wines
                are introduced as they are suitables for different type of dishes such as 
                chicken, pork, cured meat, lamb, beef, barbecue, Italian, American, Chinese, Thai, Indian, full-flavored like cheddar and firm cheeses such as Manchego.
               <br>
@@ -83,10 +83,17 @@
               </h2>
               <p id="txtContent">
                 There are a few factors that could determine the cost of a wine, such as
-                type of grapes used, wine origin region, winemaking process, and labor cost.
+                type of grapes used, wine origin region, taxation, winemaking process, and labor cost.
                 <br>
                 <br>
-                
+                <strong>Port/Sherry wines generally are more expensive </strong>than other types of wines, as
+                it is stored longer and fortified. It costs a lot of money to keep the product in 
+                a shed for several years before it is blended and bottled. Also, because of the higher alcohol content, 
+                typically 20% ABV, which attracts a higher level of taxation.
+                <br>
+                <br>
+                On the other hand, <strong>Rosé wines are cheaper</strong> to make, spends almost no time in the cellar, and is released early.
+                Rosé wine's cost of production is among the lowest of all categories of wine. 
               </p>
             </div>
   
@@ -94,6 +101,32 @@
               <div id="box_plot" class="vis-container"></div>
             </div>
           </div>
+
+          <div id="section4">
+            <div id="info">
+                <h2 id="title">
+                  Comparison Between Wine Types
+                </h2>
+                <p id="txtContent">
+                  There are a few factors that could determine the cost of a wine, such as
+                  type of grapes used, wine origin region, taxation, winemaking process, and labor cost.
+                  <br>
+                  <br>
+                  <strong>Port/Sherry wines generally are more expensive </strong>than other types of wines, as
+                  it is stored longer and fortified. It costs a lot of money to keep the product in 
+                  a shed for several years before it is blended and bottled. Also, because of the higher alcohol content, 
+                  typically 20% ABV, which attracts a higher level of taxation.
+                  <br>
+                  <br>
+                  On the other hand, <strong>Rosé wines are cheaper</strong> to make, spends almost no time in the cellar, and is released early.
+                  Rosé wine's cost of production is among the lowest of all categories of wine. 
+                </p>
+              </div>
+    
+              <div id="graph4">
+                <div id="parallel_coords" class="vis-container"></div>
+              </div>
+            </div>
       </div>
 
 
@@ -113,6 +146,11 @@
 
     var spec3 = "js/wine_price.vg.json";
     vegaEmbed('#box_plot', spec3,  { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec4 = "js/wine_type_quantitative.vg.json";
+    vegaEmbed('#parallel_coords', spec4,  { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

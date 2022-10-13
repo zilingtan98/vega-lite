@@ -33,6 +33,13 @@ body {
 	/* border-style: solid; */
 }
 
+#section4{
+	margin-top: 30px;
+	width: 99.5%;
+	height: 1200px;
+	border-style: solid;
+}
+
 #info{
 	width: 35%;
 	float: left;
