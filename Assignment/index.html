@@ -108,13 +108,82 @@
                   Comparison Between Wine Types
                 </h2>
                 <p id="txtContent">
-                </p>
+                  <strong>Low Alcohol Wines:</strong> Under the 10% ABV level, most wines will be light in body and sweet.
+                  Usually these are <strong>Sparkling wines</strong>.
+                  <br>
+                  <br>
+                  <strong>Medium-Low Alcohol Wines:</strong> Ranging from 10–11.5% ABV are usually 
+                  produced when less-sweet grapes are used to make wine. Common in <strong>White and Sparkling 
+                  wines</strong>.
+                  <br>
+                  <br>
+                  <strong>Medium Alcohol Wines:</strong> Ranging from 11.5%–13.5% ABV is the average. Common 
+                  in <strong>White wines</strong>. 
+                  <br>
+                  <br>
+                  <strong>Medium-High Alcohol Wines:</strong> Ranging from 13.5%–15% ABV. Average dry wines
+                   such as <strong>Red and Rosé wines</strong> usually falls in this category. 
+                  <br>
+                  <br>
+                  <strong>High Alcohol Wines:</strong> Ranging from 15%–23% ABV. Made one of two possible ways: naturally or with fortification.
+                    Usually fortified so that wine was to preserve the flavor of wines during the age of exploration.
+                    <strong> Dessert, Fortified, and Port/Sherry</strong> wines usually fall under this category.
+                    <br>
+                    <br>
+                    Wine Rating/Scores can be explained by:
+                    <br>
+                    <table id="rating_tbl">
+                      <tr>
+                        <th>Rating/Score</th>
+                        <th>Explanation</th>
+                      </tr>
+                      <tr>
+                        <td>95–100</td>
+                        <td>Classic: a great wine</td>
+                      </tr>
+                      <tr>
+                        <td>90–94</td>
+                        <td>Outstanding: a wine of superior character and style</td>
+                      </tr>
+                      <tr>
+                        <td>85–89</td>
+                        <td>Very good: a wine with special qualities</td>
+                      </tr>
+                      <tr>
+                        <td>80–84</td>
+                        <td>Good: a solid, well-made wine</td>
+                      </tr>
+                      <tr>
+                        <td>75–79</td>
+                        <td>Mediocre: a drinkable wine that may have minor flaws</td>
+                      </tr>
+                      <tr>
+                        <td>50–74</td>
+                        <td>Not recommended</td>
+                      </tr>
+                    </table>
+                  </p>
               </div>
     
               <div id="graph4">
                 <div id="parallel_coords" class="vis-container"></div>
               </div>
             </div>
+
+
+            <div id="section5">
+              <div id="info">
+                  <h2 id="title">
+                    Reviews from Professionals
+                  </h2>
+                  <p id="txtContent">
+                  </p>
+                </div>
+      
+                <div id="graph5">
+                  <div id="chonky_boi" class="vis-container"></div>
+                </div>
+              </div>
       </div>
 
 
@@ -141,6 +210,12 @@
     vegaEmbed('#parallel_coords', spec4,  { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
+
+    var spec5 = "js/reviewer_wine_type.vg.json";
+    vegaEmbed('#chonky_boi', spec5,  { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
   </script>
 
 </body>

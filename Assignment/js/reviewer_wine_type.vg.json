@@ -3,7 +3,7 @@
     "height": 600,
     "width": 650,
     "title": {
-      "text": "Reviewers and Their Type of Wines Reviewed",
+      "text": "Reviewers and the Type of Wines Reviewed",
       "align": "center",
       "encode": {
         "title": {

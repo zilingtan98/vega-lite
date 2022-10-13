@@ -43,7 +43,7 @@
     }
   ],
   "width": 550,
-  "height": 400,
+  "height": 850,
   "transform": [
     {"filter": "selection == null || datum.category == selection"},
     {"window": [{"op": "count", "as": "index"}]},
