@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 525,
+  "width": 620,
   "height": 350,
   "title": "Wine Available by Each Country",
   "signals": [
