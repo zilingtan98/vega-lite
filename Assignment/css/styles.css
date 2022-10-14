@@ -6,34 +6,13 @@ body {
 	margin: auto;
 }
 
-#rating_tbl {
-	font-family: "Open Sans";
-	border-collapse: collapse;
-	width: 100%;
-  }
-  
-  #rating_tbl td, #rating_tbl th {
-	border: 1px solid #ddd;
-	padding: 3px;
-  }
-  
-  #rating_tbl tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #rating_tbl tr:hover {background-color: #ddd;}
-  
-  #rating_tbl th {
-	padding-top: 3px;
-	padding-bottom: 3px;
-	text-align: left;
-	background-color: #0476aa;
-	color: white;
-  }
+
 
 #header{
 	text-align: center;
 	/* border-style: solid; */
 	font-family: "Open Sans";
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: bolder;
 	/* text-decoration: underline; */
 	
@@ -60,7 +39,7 @@ body {
 #section4{
 	margin-top: 30px;
 	width: 99.5%;
-	height: 950px;
+	height: 520px;
 }
 
 #section5{
@@ -81,7 +60,7 @@ body {
 	margin-top: 10px;
 	text-align: left;
 	font-family: "Open Sans";
-	font-size: 25px;
+	font-size: 30px;
 }
 #txtContent{
 	font-family: "Open Sans";
